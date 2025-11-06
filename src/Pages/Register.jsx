@@ -2,6 +2,8 @@ import React, { use, useState } from 'react';
 
 import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { FaEye } from 'react-icons/fa';
+import { LuEyeClosed } from 'react-icons/lu';
 
 const Registration = () => {
      const {createUser, setUser, signInWithGoogle, updateUserProfile} = use(AuthContext);
@@ -88,21 +90,21 @@ const navigate = useNavigate();
     
    
     return (
-      <div>
+      <div className='bg-neutral-800'>
        <div><title>WarmPaws Register</title></div>
         <div className="hero base-200 min-h-screen">
   <div className="hero-content flex-col">
     <div className="text-center">
-      <h1 className="text-5xl font-bold">Registration now!</h1>
-      <p className="py-6">
+      <h1 className="text-5xl font-bold text-white">Registration now!</h1>
+      <p className="py-6 text-white">
         Welcome ! Sign up to keep your pets warm, safe, and stylish this winter.
       </p>
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
-        <form onSubmit={handleSubmit}>
+      <div className="card-body bg-linear-to-r from-[#003832] to-[#00ad9c]">
+        <form className='' onSubmit={handleSubmit}>
         <fieldset className="fieldset ">
-             <label className="label">Name</label>
+             <label className="label text-white">Name</label>
             <input
               name="name"
               type="text"
@@ -114,7 +116,7 @@ const navigate = useNavigate();
             {nameError && <p className="text-xs text-error">{nameError}</p>}
 
             {/* Photo URl  */}
-            <label className="label">Photo URl </label>
+            <label className="label text-white">Photo URl </label>
             <input
               name="photo"
               type="text"
@@ -123,15 +125,15 @@ const navigate = useNavigate();
               required
             />
 
-          <label className="label">Email</label>
+          <label className="label text-white">Email</label>
           <input name='email' type="email" className="input" placeholder="Email" />
-          <label className="label">Password</label>
+          <label className="label text-white">Password</label>
          <div className='relative'>
           <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />
           <button onClick={handlePasswordShow} className='text-2xl top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <LuEyeClosed></LuEyeClosed>}</button>
           </div>
          <div>
-            <label className="label">
+            <label className="label text-white">
          <input name='terms' type="checkbox" className="checkbox" />
         Accept our terms and condition
         </label>
@@ -150,7 +152,7 @@ const navigate = useNavigate();
   Login with Google
 </button>
 
-          <p>Already have an account ? Please <Link className='text-amber-700' to='/login'>Sign in</Link></p>
+          <p className='text-white'>Already have an account ? Please <Link className='text-amber-700' to='/login'>Sign in</Link></p>
         </fieldset>
         </form>
       </div>

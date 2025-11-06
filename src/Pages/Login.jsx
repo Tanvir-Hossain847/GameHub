@@ -1,6 +1,8 @@
 import { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
+import Loader from "../Components/Loader";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 
@@ -64,38 +66,38 @@ const Login = () => {
 
    
     return (
-      <div>
+      <div className="bg-neutral-800">
         <div><title>WarmPaws Log in</title></div>
 {
-  loading ? (<Loder></Loder>) : (<div className=" lg:mt-40 mt-20  min-h-screen">
+  loading ? (<Loader></Loader>) : (<div className=" lg:pt-40 pt-20  min-h-screen">
   <div className=" flex-col flex justify-center items-center ">
     <div className="text-center">
-      <h1 className="text-5xl font-bold text-red-900">Login now!</h1>
-      <p className="py-6">
+      <h1 className="text-5xl font-bold text-[#00ad9c]">Login now!</h1>
+      <p className="py-6 text-white">
        Welcome back! Log in to keep your pets warm, safe, and stylish this winter.
       </p>
     </div>
-    <div className="card bg-gradient-to-r from-[#f1dcaa] to-[#FFB347] w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-linear-to-r from-[#003832] to-[#00ad9c] w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <form onSubmit={handleSubmit}>
 
         <fieldset className="fieldset">
-          <label  className="label">Email</label>
+          <label  className="label text-white">Email</label>
           <input 
           value={email} 
           onChange={(e) => setEmail(e.target.value)}  name='email' 
           type="email" 
           className="input" 
           placeholder="Email" />
-          <label className="label">Password</label>
+          <label className="label text-white">Password</label>
           <div className='relative'>
                     <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />
-                    <button type="button" onClick={handlePasswordShow} className='text-2xl top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <LuEyeClosed></LuEyeClosed>}</button>
+                    <button type="button" onClick={handlePasswordShow} className='text-xl text-[#00ad9c] top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash> }</button>
                     </div>
-          <button onClick={handleForgetPassword}><a className="button link-hover text-left">Forgot password?</a></button>
+          <button onClick={handleForgetPassword}><a className="button link-hover text-left text-white">Forgot password?</a></button>
 
           {
-            err && <p className="text-red-700">Please provide a valid Email or Password !</p>
+            err && <p className=" text-white">Please provide a valid Email or Password !</p>
           }
           <button className="btn btn-success text-white mt-4">Login</button>
         </fieldset>
@@ -105,7 +107,7 @@ const Login = () => {
   <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
   Login with Google
 </button>
-<p>Don't have an account? please <Link className='text-amber-700' to='/register'>Sign up</Link></p>
+<p className="text-white">Don't have an account? please <Link className='text-amber-700' to='/register'>Sign up</Link></p>
       </div>
     </div>
   </div>
