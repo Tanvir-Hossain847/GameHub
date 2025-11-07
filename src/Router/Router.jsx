@@ -14,23 +14,11 @@ export const router = createBrowserRouter([
         {
             index: true,
             path:'/',
-  //             loader: async () => {
-  //   const [petsRes, tipsRes, vetsRes] = await Promise.all([
-  //     fetch('/pets.json'),
-  //     fetch('/tips.json'),
-  //     fetch('/vets.json')
-      
-  //   ]);
-
-  //   const [pets, tips, vets] = await Promise.all([
-  //     petsRes.json(),
-  //     tipsRes.json(),
-  //     vetsRes.json()
-  //   ]);
-
-  //   return { pets, tips,  vets};
-  // },
             element:<Home></Home>,
+        },
+        {
+          path: '/products',
+          element: 
         },
         {
           path:'/register',

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAh05Y4PrQiRnJUNEWYUMAutdNxosXnhmw",
-  authDomain: "gamehub-6f431.firebaseapp.com",
-  projectId: "gamehub-6f431",
-  storageBucket: "gamehub-6f431.firebasestorage.app",
-  messagingSenderId: "822617193499",
-  appId: "1:822617193499:web:cc6885cd1d422598cd4cbe"
+  apiKey: "AIzaSyA3BWNldvbq15bmtP0NOB4IexJljJpIEUE",
+  authDomain: "assignment-10-8a9e3.firebaseapp.com",
+  projectId: "assignment-10-8a9e3",
+  storageBucket: "assignment-10-8a9e3.firebasestorage.app",
+  messagingSenderId: "180840220311",
+  appId: "1:180840220311:web:ecb6cfea0f881b42b6cbd2"
 };
 
 // Initialize Firebase

@@ -1,25 +1,28 @@
 import React from 'react';
-import Slider from '../Components/Slider';
-import MiniSlider from '../Components/MiniSlider';
 import Reviews from '../Components/Reviews';
+import HeroBanner from '../Components/HeroBanner';
+import TopSection from '../Components/TopSection';
+import RecentSection from '../Components/RecentSection';
+
 
 const Home = () => {
     return (
         <div>
-            <div className='min-h-screen bg-neutral-800'>
+                  <div className='min-h-screen'>
                 <header className='py-10'>
-                    <Slider></Slider>
+                    <HeroBanner></HeroBanner>
                 </header>
 
                 <main className='py-20'>
-                    <h1 className='font-bold primary text-white text-3xl text-center'>Popular Games</h1>
-
-                    <div className="py-10">
-                        <MiniSlider></MiniSlider>
+                    <div className="">
+                        <h1 className='font-bold text-3xl text-black text-center py-10'>Top Section</h1>
+                        <TopSection></TopSection>
                     </div>
                     <div className="">
-                        <h1 className='font-bold primary text-white text-3xl text-center py-5'>Action Games</h1>
-                        <MiniSlider></MiniSlider>
+                        <h1 className='font-bold text-3xl text-black text-center pt-20 pb-10'>
+                            Recent Sections
+                        </h1>
+                            <RecentSection></RecentSection>
                     </div>
                     <div className="py-10">
                         <Reviews></Reviews>
